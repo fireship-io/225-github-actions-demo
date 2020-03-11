@@ -1,0 +1,24 @@
+name: Firebase CI/CD
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  PROJECT_ID: fireship-lessons
+  FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npm run deploy
