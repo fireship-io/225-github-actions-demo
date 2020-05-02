@@ -1,5 +1,5 @@
 const dayOfTheWeek = (date = new Date()) => {
-    const days = ['unday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const days = ['nday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     return days[date.getDay()];
 }
