@@ -1,5 +1,5 @@
 {
   "projects": {
-    "demo": "oneshore-training"
+    "default": "oneshore-training"
   }
 }
