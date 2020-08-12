@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "fireship-lessons"
+    "demo": "oneshore-training",
+    "default": "oneshore-training"
   }
 }
