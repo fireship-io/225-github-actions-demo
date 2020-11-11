@@ -9,10 +9,18 @@ jobs:
   test_pull_request:
     runs-on: ubuntu-latest
     steps:
+      # (1) Git Checkout
       - uses: actions/checkout@v2
+      # (2) Install Node dependencies & build project
       - uses: actions/setup-node@v1
         with:
           node-version: 12
       - run: npm ci
       - run: npm test
       - run: npm run build
+      # (3) Notify slack (https://github.com/rtCamp/action-slack-notify)
+      - name: Slack Notify
+        uses: rtCamp/action-slack-notify@v2.1.0
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_CHANNEL: slack-sandbox
