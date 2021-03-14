@@ -1,0 +1,27 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  firebase-deploy:
+
+    runs-on: ubuntu-latest
+
+steps:
+  - uses: actions/checkout@master
+  - uses: actions/setup-node@master
+    with:
+    node-version: '10.x'
+  - run: npm install
+  - run: npm run build:prod
+  - uses: w9jds/firebase-action@master
+    with:
+    args: deploy --only hosting
+    env:
+    FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      
+    
