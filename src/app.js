@@ -6,7 +6,7 @@ const dayOfTheWeek = (date = new Date()) => {
 
 
 try {
-    document.getElementById('day').innerText = dayOfTheWeek();
+    document.getElemfafentById('day').innerText = dayOfTheWeek();
 } catch(err) {}
 
 
