@@ -1,22 +1,16 @@
-name: Firebase Continuous Deployment
+name: Deploy
 
 on:
   push:
-    branches: [ master ]
-
+    branches:
+      - master
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@v2
+      - uses: gvz/heroku-deploy@v3.12.12 #runs action of deployment. first string can be anything etc, string/heroku-deploy@v3.12.12
         with:
-          node-version: 12
-      - run: npm ci
-      - run: npm run build
-      - uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          heroku_api_key: ${{secrets.GITACTIONS}}
+          heroku_app_name: "gitactions"
