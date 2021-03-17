@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: gitactions/heroku-deploy@v3.12.12 #runs action of deployment. first string can be anything etc, string/heroku-deploy@v3.12.12
+      - uses: gerrit450/225-github-actions-demo #runs action of deployment. first string can be anything etc, string/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.GITACTIONS}}
-          heroku_app_name: "gitactions"
+          heroku_app_name: "applicationstage"
