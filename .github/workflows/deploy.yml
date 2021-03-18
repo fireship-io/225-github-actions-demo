@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
+          
       - run: npm ci
       - run: npm run build
       - uses: w9jds/firebase-action@master
