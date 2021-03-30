@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "fireship-lessons"
+    "default": "fireship-lessons",
+    "fireship-lessons": "fireship-lessons-c150d"
   }
 }
