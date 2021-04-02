@@ -4,6 +4,10 @@ const dayOfTheWeek = (date = new Date()) => {
     return days[date.getDay()];
 }
 
+const addTwoNumbers = (first, second) => {
+    return first + second + 1;
+}
+
 
 try {
     document.getElementById('day').innerText = dayOfTheWeek();
@@ -11,3 +15,4 @@ try {
 
 
 exports.dayOfTheWeek = dayOfTheWeek;
+exports.addTwoNumbers = addTwoNumbers;
