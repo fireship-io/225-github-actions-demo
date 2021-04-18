@@ -7,13 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  test_pull_request:
     runs-on: ubuntu-latest
 
     strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+      #matrix:
+       # node-version: [10.x, 12.x, 14.x, 15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -24,12 +23,15 @@ jobs:
     - name: Building...
       run: npm run build --if-present
     - name: Testing...
-      run: npm test -- --coverage
-    - name: Uploading tests coverage...
-      run: codecov/codecov-action@v1
+      run: npm test 
+      #-- --coverage
+    - name: Building...
+      run: npm run build
+  #  - name: Uploading tests coverage...
+  #    run: codecov/codecov-action@v1
       
       #jezeli repo prywatne
-    - name: Uploading coverage to Codecov...
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+    #- name: Uploading coverage to Codecov...
+    #  uses: codecov/codecov-action@v1
+    #  with:
+    #    token: ${{ secrets.CODECOV_TOKEN }}
