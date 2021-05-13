@@ -8,6 +8,7 @@ const dayOfTheWeek = (date = new Date()) => {
     "Friday",
     "Saturday",
     "Newday",
+    "9th day",
   ];
 
   return days[date.getDay()];
