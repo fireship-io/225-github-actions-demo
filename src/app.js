@@ -1,4 +1,4 @@
-const dayOfTheWeek = (date = new Date()) => {
+const dayOfTheWeek = (date = new Dat()) => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     return days[date.getDay()];
@@ -7,7 +7,7 @@ const dayOfTheWeek = (date = new Date()) => {
 
 try {
     document.getElementById('day').innerText = dayOfTheWeek();
-} catch(err) {}
+} catch (err) { }
 
 
 exports.dayOfTheWeek = dayOfTheWeek;
