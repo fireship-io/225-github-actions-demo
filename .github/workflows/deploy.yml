@@ -1,8 +1,8 @@
 name: Firebase Continuous Deployment
 
 on:
-  pull_request_review_comment:
-    type: created
+  pull_request:
+    branches: [ master ]
 
 jobs:
   deploy:
