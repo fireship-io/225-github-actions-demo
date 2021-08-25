@@ -1,8 +1,8 @@
 name: Firebase Continuous Deployment
 
 on:
-  pull_request:
-    branches: [ master ]
+  project_card:
+    types: created
 
 jobs:
   deploy:
