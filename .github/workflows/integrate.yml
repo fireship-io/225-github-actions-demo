@@ -16,3 +16,6 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - run: npx -p check-code-coverage set-gh-status
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
