@@ -1,18 +1,24 @@
 name: Node Continuous Integration
 
+# ! which events to run
 on:
   pull_request:
     branches: [ master ]
-
-
+  
+# ! list of jobs
 jobs:
+  # ! job name 
   test_pull_request:
     runs-on: ubuntu-latest
     steps:
+      # ! checkout - bring the code from the repo to the runner
       - uses: actions/checkout@v2
+      # ! setup node environment - since we are testing a node app
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
-      - run: npm ci
+          node-version: '18.0.0'
+      # ! we've setup node env, so we can directly run npm commands
+      # ! run npm ci - install dependencies
+      - run: npm ci # ! ci = clean install - no cache
       - run: npm test
       - run: npm run build
