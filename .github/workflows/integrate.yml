@@ -1,9 +1,8 @@
-name: Node Continuous Integration
+name: Node CI
 
 on:
   pull_request:
     branches: [ master ]
-
 
 jobs:
   test_pull_request:
