@@ -1,11 +1,11 @@
 {
   "name": "devops",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack src/app.js -o public/bundle.js",
+    "build": "webpack src/app2.js -o public/bundle.js",
     "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting"
   },
   "keywords": [],
