@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack src/app.js -o public/bundle.js",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --config config.js src/app.js -o public/bundle.js",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider",
     "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting"
   },
   "keywords": [],
