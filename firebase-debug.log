@@ -1,0 +1,49 @@
+[debug] [2025-04-22T15:08:58.540Z] ----------------------------------------------------------------------
+[debug] [2025-04-22T15:08:58.541Z] Command:       /Users/manpao/.nvm/versions/node/v20.18.3/bin/node /Users/manpao/Downloads/test/225-github-actions-demo/node_modules/.bin/firebase emulators:start
+[debug] [2025-04-22T15:08:58.541Z] CLI Version:   14.2.0
+[debug] [2025-04-22T15:08:58.541Z] Platform:      darwin
+[debug] [2025-04-22T15:08:58.541Z] Node Version:  v20.18.3
+[debug] [2025-04-22T15:08:58.541Z] Time:          Tue Apr 22 2025 22:08:58 GMT+0700 (Indochina Time)
+[debug] [2025-04-22T15:08:58.541Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-22T15:08:58.633Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-22T15:08:58.633Z] > authorizing via signed-in user (6733179021@student.chula.ac.th)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2025-04-22T15:08:58.770Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-04-22T15:08:58.770Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-04-22T15:08:58.770Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-04-22T15:08:58.772Z] [hub] writing locator at /var/folders/06/qj41d4fx3gn4bg_pjr4071gh0000gn/T/hub-my-gh-actions-demo.json
+[debug] [2025-04-22T15:08:58.777Z] Checked if tokens are valid: true, expires at: 1745337138598
+[debug] [2025-04-22T15:08:58.777Z] Checked if tokens are valid: true, expires at: 1745337138598
+[debug] [2025-04-22T15:08:58.778Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-gh-actions-demo/sites 
+[debug] [2025-04-22T15:08:59.648Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-gh-actions-demo/sites 200
+[debug] [2025-04-22T15:08:59.648Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/my-gh-actions-demo/sites {"sites":[{"name":"projects/my-gh-actions-demo/sites/my-gh-actions-demo","defaultUrl":"https://my-gh-actions-demo.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-04-22T15:08:59.648Z] Checked if tokens are valid: true, expires at: 1745337138598
+[debug] [2025-04-22T15:08:59.649Z] Checked if tokens are valid: true, expires at: 1745337138598
+[debug] [2025-04-22T15:08:59.649Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-gh-actions-demo/webApps/-/config [none]
+[debug] [2025-04-22T15:09:00.175Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-gh-actions-demo/webApps/-/config 200
+[debug] [2025-04-22T15:09:00.175Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-gh-actions-demo/webApps/-/config {"projectId":"my-gh-actions-demo","storageBucket":"my-gh-actions-demo.firebasestorage.app","apiKey":"AIzaSyBExO-FkZ9JaOV88pVzDzjtae6EjwG5PFQ","authDomain":"my-gh-actions-demo.firebaseapp.com","messagingSenderId":"568684118422"}
+[debug] [2025-04-22T15:09:00.187Z] Checked if tokens are valid: true, expires at: 1745337138598
+[debug] [2025-04-22T15:09:00.187Z] Checked if tokens are valid: true, expires at: 1745337138598
+[debug] [2025-04-22T15:09:00.188Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-gh-actions-demo [none]
+[debug] [2025-04-22T15:09:00.567Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-gh-actions-demo 200
+[debug] [2025-04-22T15:09:00.567Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-gh-actions-demo {"projectId":"my-gh-actions-demo","projectNumber":"568684118422","displayName":"my-gh-actions-demo","name":"projects/my-gh-actions-demo","resources":{"hostingSite":"my-gh-actions-demo"},"state":"ACTIVE","etag":"1_682ecd75-4f0e-45da-919a-d1233ab491e3"}
+[info] i  hosting[my-gh-actions-demo]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[my-gh-actions-demo]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[warn] ⚠  emulators: The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[debug] [2025-04-22T15:09:00.621Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ 127.0.0.1:5000 │
+└──────────┴────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
