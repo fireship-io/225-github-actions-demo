@@ -5,19 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack src/app.js -o public/bundle.js",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --config config.js src/app.js -o public/bundle.js",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider",
     "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^25.1.0",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
+    "firebase-tools": "^13.6.0",
+    "jest": "^29.7.0",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "firebase-tools": "^7.14.0",
+    "react-scripts": "^5.0.1",
     "terser": "^4.6.6"
   }
 }
