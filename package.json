@@ -18,6 +18,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "react-scripts": "^5.0.1",
     "terser": "^4.6.6"
   }
 }
