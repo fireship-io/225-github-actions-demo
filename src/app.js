@@ -1,5 +1,5 @@
 const dayOfTheWeek = (date = new Date()) => {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wdnesday', 'Thursday', 'Friday', 'Saturday'];
 
     return days[date.getDay()];
 }
@@ -7,7 +7,7 @@ const dayOfTheWeek = (date = new Date()) => {
 
 try {
     document.getElementById('day').innerText = dayOfTheWeek();
-} catch(err) {}
+} catch (err) { }
 
 
 exports.dayOfTheWeek = dayOfTheWeek;
